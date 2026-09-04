@@ -1,0 +1,9 @@
+# Nada de ambiente local, de dependencias de desenvolvimento ou de artefactos.
+# Este repositorio e o ESPELHO da versao publicada, nao a arvore de trabalho.
+node_modules/
+vendor/bin/
+.DS_Store
+Thumbs.db
+*.zip
+.idea/
+.vscode/
