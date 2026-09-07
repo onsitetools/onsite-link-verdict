@@ -9,6 +9,7 @@
 why.
 
 - **Install it:** [wordpress.org/plugins/onsite-link-verdict](https://wordpress.org/plugins/onsite-link-verdict/) — or, inside your site, **Plugins → Add New → search "Onsite Link Verdict"**
+- **Try the rule on one link, without installing anything:** [onsitetools.dev/check-a-link](https://onsitetools.dev/check-a-link/) — it asks the same address twice, once as a robot and once as a browser, and shows you both answers
 - **Product page:** [onsitetools.dev/onsite-link-verdict](https://onsitetools.dev/onsite-link-verdict/)
 - **Support:** [support@onsitetools.dev](mailto:support@onsitetools.dev) · [support page](https://onsitetools.dev/support/) · or open an issue here
 
