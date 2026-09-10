@@ -23,9 +23,9 @@ Plenty of servers refuse automated requests without the page being gone. Amazon 
 bots. X answers `403`. LinkedIn answers `999`. A site behind a bot firewall returns a challenge
 page. **None of those links are broken** — they open perfectly well in a browser.
 
-Report them as broken and you hand somebody a list of two hundred problems, of which a hundred and
-ninety are not problems. The list stops being read. A checker whose output nobody trusts has failed
-at the only thing it does.
+So a status code alone cannot settle the question. `404` and a refusal both arrive as "not `200`",
+and treating them the same turns ten real problems and a hundred and ninety refusals into one list
+of two hundred. The work is in telling them apart, and that is what this plugin is built around.
 
 ## What this does instead
 
@@ -84,6 +84,12 @@ Your posts, pages and comments are never uploaded anywhere. The full account, in
 and the four moments at which Freemius is contacted, is in the **External services** section of the
 [plugin listing](https://wordpress.org/plugins/onsite-link-verdict/) and in the
 [privacy note](https://onsitetools.dev/privacy/).
+
+## Written up in more detail
+
+- [Why a link checker reports links that work](https://onsitetools.dev/links-that-work-but-report-as-broken/) — what is happening when the page opens for you and not for the checker, and how to tell the two apart
+- [HTTP status codes when checking links](https://onsitetools.dev/http-status-codes-for-link-checking/) — the fifteen codes this job actually meets, and what each means for a link
+- [Checking links on a staging or password-protected site](https://onsitetools.dev/check-links-on-a-staging-site/) — why an outside service cannot, and what does
 
 ## Free and paid
 
