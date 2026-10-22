@@ -4,7 +4,7 @@
  * Plugin Name:       Onsite Link Verdict — Broken Link Checker
  * Plugin URI:        https://onsitetools.dev/onsite-link-verdict/
  * Description:       Finds broken links on your site. The checking runs on your own server — no cloud service, no account, no signup, no credits.
- * Version:           0.6.6
+ * Version:           0.9.0
  * Requires at least: 6.1
  * Requires PHP:      7.4
  * Author:            Onsite Tools
@@ -125,7 +125,7 @@ if ( !defined( 'ONSITE_LINK_VERDICT_SKIP_FREEMIUS' ) && !function_exists( 'onsit
     onsite_link_verdict_registar_desinstalacao( onsite_link_verdict_fs() );
 }
 if ( !defined( 'ONSITE_LINK_VERDICT_VERSION' ) ) {
-    define( 'ONSITE_LINK_VERDICT_VERSION', '0.6.6' );
+    define( 'ONSITE_LINK_VERDICT_VERSION', '0.9.0' );
     define( 'ONSITE_LINK_VERDICT_FILE', __FILE__ );
     define( 'ONSITE_LINK_VERDICT_DIR', plugin_dir_path( __FILE__ ) );
 }
@@ -164,6 +164,9 @@ register_activation_hook( ONSITE_LINK_VERDICT_FILE, function () {
     update_option( \OnsiteLinkVerdict\Store::VERSION_OPTION, ONSITE_LINK_VERDICT_VERSION, false );
     $cron = new \OnsiteLinkVerdict\Cron();
     $cron->schedule();
+    // A data de instalacao, que e' o relogio do convite a avaliar. Usa
+    // add_option, por isso uma reactivacao nao reinicia a contagem.
+    \OnsiteLinkVerdict\Review_Prompt::registar_instalacao();
 } );
 /**
  * Rede de segurança do painel — duas coisas que a ativação faz uma vez e depois
@@ -227,6 +230,12 @@ add_action( 'admin_menu', function () {
     $pagina = new \OnsiteLinkVerdict\Admin_Page();
     $pagina->register();
 } );
+/*
+ * As abilities para assistentes de IA (WordPress 6.9+). Abaixo dessa versão
+ * estes dois hooks nunca disparam. Ver `includes/class-abilities.php`.
+ */
+add_action( 'wp_abilities_api_categories_init', array('\\OnsiteLinkVerdict\\Abilities', 'register_category') );
+add_action( 'wp_abilities_api_init', array('\\OnsiteLinkVerdict\\Abilities', 'register') );
 /**
  * Quando um artigo é publicado ou atualizado, o varrimento é AGENDADO em
  * segundo plano — nunca corre em linha com a gravação.

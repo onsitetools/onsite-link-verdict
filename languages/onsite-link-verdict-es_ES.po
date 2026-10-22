@@ -1,0 +1,642 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Onsite Link Verdict\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/onsite-link-verdict\n"
+"Last-Translator: Onsite Tools <support@onsitetools.dev>\n"
+"Language-Team: Onsite Tools\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: onsite-link-verdict\n"
+
+#: onsite-link-verdict.php
+msgid "Onsite Link Verdict — Broken Link Checker"
+msgstr "Onsite Link Verdict — Comprobador de enlaces rotos"
+
+#: onsite-link-verdict.php
+msgid "https://onsitetools.dev/onsite-link-verdict/"
+msgstr ""
+
+#: onsite-link-verdict.php
+msgid "Finds broken links on your site. The checking runs on your own server — no cloud service, no account, no signup, no credits."
+msgstr "Encuentra los enlaces rotos de tu sitio. La comprobación se ejecuta en tu propio servidor: sin servicio en la nube, sin cuenta, sin registro y sin créditos."
+
+#: onsite-link-verdict.php
+msgid "Onsite Tools"
+msgstr ""
+
+#: onsite-link-verdict.php
+msgid "https://profiles.wordpress.org/onsitetools/"
+msgstr ""
+
+#: admin/class-admin-page.php:45
+#: admin/class-admin-page.php:46
+#: admin/class-admin-page.php:654
+#: includes/class-abilities.php:68
+msgid "Onsite Link Verdict"
+msgstr ""
+
+#: admin/class-admin-page.php:88
+msgid "%d — the server answered this every time we asked. It is refusing automated checks, not telling us the page is gone. Open it in your browser to confirm."
+msgstr "%d — el servidor respondió esto cada vez que preguntamos. Está rechazando comprobaciones automáticas, no diciendo que la página haya desaparecido. Ábrela en el navegador para confirmarlo."
+
+#: admin/class-admin-page.php:93
+msgid "The domain no longer exists."
+msgstr "El dominio ya no existe."
+
+#: admin/class-admin-page.php:94
+msgid "The server took too long to respond."
+msgstr "El servidor tardó demasiado en responder."
+
+#: admin/class-admin-page.php:95
+msgid "The destination's security certificate has problems."
+msgstr "El certificado de seguridad del destino tiene problemas."
+
+#: admin/class-admin-page.php:96
+msgid "Could not connect to the server."
+msgstr "No se pudo conectar con el servidor."
+
+#: admin/class-admin-page.php:97
+msgid "The redirects go in circles and never arrive anywhere."
+msgstr "Las redirecciones dan vueltas en círculo y no llegan a ninguna parte."
+
+#: admin/class-admin-page.php:98
+msgid "Too many redirects in a chain."
+msgstr "Demasiadas redirecciones encadenadas."
+
+#: admin/class-admin-page.php:101
+msgid "Could not check this link."
+msgstr "No se pudo comprobar este enlace."
+
+#: admin/class-admin-page.php:123
+msgid "This page is on your site but is not published (status: %s), so visitors get a 404. Publish it, or point the link somewhere else."
+msgstr "Esta página es de tu sitio pero no está publicada (estado: %s), así que los visitantes reciben un 404. Publícala o apunta el enlace a otro sitio."
+
+#: admin/class-admin-page.php:129
+msgid "404 — the page no longer exists."
+msgstr "404 — la página ya no existe."
+
+#: admin/class-admin-page.php:130
+msgid "410 — the page was permanently removed."
+msgstr "410 — la página se eliminó de forma permanente."
+
+#: admin/class-admin-page.php:131
+msgid "403 — the server blocks automated checks. The link is probably fine; open it in your browser to confirm."
+msgstr "403 — el servidor bloquea las comprobaciones automáticas. El enlace probablemente esté bien; ábrelo en el navegador para confirmarlo."
+
+#: admin/class-admin-page.php:132
+msgid "401 — the page requires authentication."
+msgstr "401 — la página requiere autenticación."
+
+#: admin/class-admin-page.php:133
+msgid "429 — we were asked to slow down. We will try again later."
+msgstr "429 — nos han pedido que bajemos el ritmo. Lo intentaremos más tarde."
+
+#: admin/class-admin-page.php:134
+msgid "451 — blocked for legal reasons."
+msgstr "451 — bloqueado por motivos legales."
+
+#: admin/class-admin-page.php:135
+msgid "999 — a response some sites (such as LinkedIn) give to bots. This is not a broken link."
+msgstr "999 — una respuesta que algunos sitios (como LinkedIn) dan a los bots. Esto no es un enlace roto."
+
+#: admin/class-admin-page.php:136
+msgid "500 — error on the destination server. This may be temporary."
+msgstr "500 — error en el servidor de destino. Puede ser temporal."
+
+#: admin/class-admin-page.php:137
+msgid "502 — the destination server is having problems. This may be temporary."
+msgstr "502 — el servidor de destino tiene problemas. Puede ser temporal."
+
+#: admin/class-admin-page.php:138
+msgid "503 — service temporarily unavailable."
+msgstr "503 — servicio no disponible temporalmente."
+
+#: admin/class-admin-page.php:146
+msgid "Not checked yet."
+msgstr "Todavía sin comprobar."
+
+#: admin/class-admin-page.php:150
+msgid "The server responded %d."
+msgstr "El servidor respondió %d."
+
+#: admin/class-admin-page.php:269
+msgid "Speed saved."
+msgstr "Velocidad guardada."
+
+#: admin/class-admin-page.php:274
+msgid "Speed saved. At this pace the queue takes about %s."
+msgstr "Velocidad guardada. A este ritmo la cola tarda unas %s."
+
+#: admin/class-admin-page.php:292
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] "%s hora"
+msgstr[1] "%s horas"
+
+#: admin/class-admin-page.php:301
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s día"
+msgstr[1] "%s días"
+
+#: admin/class-admin-page.php:336
+msgid "Careful"
+msgstr "Prudente"
+
+#: admin/class-admin-page.php:337
+msgid "The lightest setting. Use it on shared or slow hosting, or if your host has complained about background work before."
+msgstr "El ajuste más ligero. Úsalo en alojamiento compartido o lento, o si tu proveedor ya se ha quejado del trabajo en segundo plano."
+
+#: admin/class-admin-page.php:340
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/class-admin-page.php:341
+msgid "The balance we recommend, and what most sites should stay on."
+msgstr "El equilibrio que recomendamos, y donde debería quedarse la mayoría de los sitios."
+
+#: admin/class-admin-page.php:344
+msgid "Fast"
+msgstr "Rápido"
+
+#: admin/class-admin-page.php:345
+msgid "Your host has to be able to take it — and so do the sites you link to. Some of them will start refusing the checks, which means more links end up in \"Couldn't verify\". Faster is not always better."
+msgstr "Tu alojamiento tiene que poder con ello, y los sitios a los que enlazas también. Algunos empezarán a rechazar las comprobaciones, lo que hace que más enlaces acaben en «No se pudo comprobar». Más rápido no siempre es mejor."
+
+#: admin/class-admin-page.php:350
+msgid "How fast should it check?"
+msgstr "¿A qué velocidad debe comprobar?"
+
+#: admin/class-admin-page.php:351
+msgid "Finding the links is quick. Checking whether they are alive is the slow part, and this is where you decide how much of your server it may use."
+msgstr "Encontrar los enlaces es rápido. Comprobar si están vivos es la parte lenta, y aquí decides cuánto de tu servidor puede usar."
+
+#: admin/class-admin-page.php:373
+msgid "Up to %1$s links an hour."
+msgstr "Hasta %1$s enlaces por hora."
+
+#: admin/class-admin-page.php:381
+msgid "With the %1$s links waiting on this site: about %2$s."
+msgstr "Con los %1$s enlaces pendientes en este sitio: unas %2$s."
+
+#: admin/class-admin-page.php:393
+msgid "Save speed"
+msgstr "Guardar velocidad"
+
+#: admin/class-admin-page.php:433
+msgid "%d rule saved. It takes effect as each post is checked again."
+msgid_plural "%d rules saved. They take effect as each post is checked again."
+msgstr[0] "%d regla guardada. Se aplica a medida que cada entrada se vuelve a comprobar."
+msgstr[1] "%d reglas guardadas. Se aplican a medida que cada entrada se vuelve a comprobar."
+
+#: admin/class-admin-page.php:464
+#: includes/class-abilities.php:257
+msgid "Scan scheduled. Links will be checked in the background."
+msgstr "Análisis programado. Los enlaces se comprobarán en segundo plano."
+
+#: admin/class-admin-page.php:494
+msgid "This link has been queued for a new check."
+msgstr "Este enlace se ha puesto en cola para una nueva comprobación."
+
+#: admin/class-admin-page.php:554
+msgid "%s link waiting to be checked."
+msgid_plural "%s links waiting to be checked."
+msgstr[0] "%s enlace esperando comprobación."
+msgstr[1] "%s enlaces esperando comprobación."
+
+#: admin/class-admin-page.php:570
+msgid "%1$s of %2$s links checked (%3$s%%)."
+msgstr "%1$s de %2$s enlaces comprobados (%3$s%%)."
+
+#: admin/class-admin-page.php:612
+msgid "Should be done within the hour."
+msgstr "Debería terminar dentro de una hora."
+
+#: admin/class-admin-page.php:618
+msgid "At most about %s hours left."
+msgstr "Quedan como mucho unas %s horas."
+
+#: admin/class-admin-page.php:627
+msgid "At most about %s day left."
+msgid_plural "At most about %s days left."
+msgstr[0] "Queda como mucho %s día."
+msgstr[1] "Quedan como mucho unos %s días."
+
+#: admin/class-admin-page.php:635
+#: admin/class-replace-page__premium_only.php:133
+#: admin/class-upsell-page.php:72
+msgid "You do not have permission to view this page."
+msgstr "No tienes permisos para ver esta página."
+
+#: admin/class-admin-page.php:658
+msgid "WordPress cron is disabled on this site (DISABLE_WP_CRON). Automatic checks will not run until you set up a real cron job with your host."
+msgstr "El cron de WordPress está desactivado en este sitio (DISABLE_WP_CRON). Las comprobaciones automáticas no se ejecutarán hasta que configures un cron real con tu proveedor de alojamiento."
+
+#: admin/class-admin-page.php:675
+msgid "Start scan"
+msgstr "Iniciar análisis"
+
+#: admin/class-admin-page.php:679
+msgid "Broken"
+msgstr "Rotos"
+
+#: admin/class-admin-page.php:680
+msgid "Warnings"
+msgstr "Avisos"
+
+#: admin/class-admin-page.php:681
+msgid "Unverifiable"
+msgstr "No comprobables"
+
+#: admin/class-admin-page.php:682
+msgid "Good"
+msgstr "Correctos"
+
+#: admin/class-admin-page.php:757
+msgid "One item has more links than we check in one pass (%d)."
+msgid_plural "Some items have more links than we check in one pass (%d)."
+msgstr[0] "Un elemento tiene más enlaces de los que comprobamos de una vez (%d)."
+msgstr[1] "Algunos elementos tienen más enlaces de los que comprobamos de una vez (%d)."
+
+#: admin/class-admin-page.php:767
+msgid "The rest of the links in them have not been checked. Splitting the content into more than one page is the reliable fix."
+msgstr "El resto de sus enlaces no se ha comprobado. Dividir el contenido en más de una página es la solución fiable."
+
+#: admin/class-admin-page.php:771
+msgid "%d links"
+msgstr "%d enlaces"
+
+#: admin/class-admin-page.php:796
+msgid "Some links are too long to check."
+msgstr "Algunos enlaces son demasiado largos para comprobarlos."
+
+#: admin/class-admin-page.php:798
+msgid "They are longer than 2048 characters — usually an address stuffed with tracking parameters. We do not shorten them, because a shortened address is a different address and would show up as broken when it is not."
+msgstr "Superan los 2048 caracteres, normalmente una dirección llena de parámetros de seguimiento. No los acortamos, porque una dirección acortada es una dirección distinta y aparecería como rota sin estarlo."
+
+#: admin/class-admin-page.php:802
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] "%d enlace"
+msgstr[1] "%d enlaces"
+
+#: admin/class-admin-page.php:826
+#: admin/class-links-list-table.php:151
+#: includes/class-exporter__premium_only.php:232
+#: includes/class-replacer__premium_only.php:559
+msgid "(no title)"
+msgstr "(sin título)"
+
+#: admin/class-admin-page.php:852
+msgid "Onsite Link Verdict Pro"
+msgstr ""
+
+#: admin/class-admin-page.php:874
+msgid "The Pro package is installed, but the licence is not active yet."
+msgstr "El paquete Pro está instalado, pero la licencia todavía no está activa."
+
+#: admin/class-admin-page.php:875
+msgid "If you have just entered your key, there is one step left: a confirmation email was sent to the address on this site, and Pro stays off until you click the button inside it. Look in your spam folder — that is where ours landed in testing."
+msgstr "Si acabas de introducir tu clave, falta un paso: se ha enviado un correo de confirmación a la dirección de este sitio, y Pro sigue apagado hasta que pulses el botón que viene dentro. Mira en la carpeta de spam: ahí fue donde cayó el nuestro en las pruebas."
+
+#: admin/class-admin-page.php:876
+msgid "Nothing was lost and nothing needs paying again. The features below turn on by themselves once the licence is confirmed."
+msgstr "No se ha perdido nada y no hay que pagar otra vez. Las funciones de abajo se activan solas en cuanto se confirme la licencia."
+
+#: admin/class-admin-page.php:881
+msgid "Pro adds the mechanical work: replace a URL everywhere at once (with a preview and an undo), silence domains you never want to hear about again, and export the list to CSV."
+msgstr "Pro añade el trabajo mecánico: sustituir una URL en todas partes de una vez (con vista previa y deshacer), silenciar dominios de los que no quieres volver a oír hablar y exportar la lista a CSV."
+
+#: admin/class-admin-page.php:898
+msgid "Export this tab to CSV"
+msgstr "Exportar esta pestaña a CSV"
+
+#: admin/class-admin-page.php:907
+msgid "Never check these"
+msgstr "No comprobar nunca estos"
+
+#: admin/class-admin-page.php:908
+msgid "One pattern per line. Use * for anything. A line with no * means \"contains\". Lines starting with # are notes."
+msgstr "Un patrón por línea. Usa * para cualquier cosa. Una línea sin * significa «contiene». Las líneas que empiezan por # son notas."
+
+#: admin/class-admin-page.php:912
+msgid "Save rules"
+msgstr "Guardar reglas"
+
+#: admin/class-admin-page.php:913
+msgid "Rules apply as each post is checked again, not all at once. On a large site the list takes a few background runs to catch up."
+msgstr "Las reglas se aplican a medida que cada entrada se vuelve a comprobar, no todas a la vez. En un sitio grande la lista tarda unas cuantas pasadas en ponerse al día."
+
+#: admin/class-links-list-table.php:42
+#: includes/class-exporter__premium_only.php:114
+msgid "Link text"
+msgstr "Texto del enlace"
+
+#: admin/class-links-list-table.php:43
+#: includes/class-exporter__premium_only.php:109
+msgid "URL"
+msgstr "URL"
+
+#: admin/class-links-list-table.php:44
+msgid "What's happening"
+msgstr "Qué está pasando"
+
+#: admin/class-links-list-table.php:45
+msgid "Where it is"
+msgstr "Dónde está"
+
+#: admin/class-links-list-table.php:46
+msgid "Checked"
+msgstr "Comprobado"
+
+#: admin/class-links-list-table.php:74
+msgid "(no text)"
+msgstr "(sin texto)"
+
+#: admin/class-links-list-table.php:105
+msgid "Recheck"
+msgstr "Volver a comprobar"
+
+#: admin/class-links-list-table.php:120
+msgid "Replace everywhere"
+msgstr "Sustituir en todas partes"
+
+#: admin/class-links-list-table.php:171
+msgid "ago"
+msgstr "atrás"
+
+#: admin/class-links-list-table.php:172
+msgid "not yet"
+msgstr "todavía no"
+
+#: admin/class-links-list-table.php:179
+msgid "Nothing to show here. Good news."
+msgstr "Aquí no hay nada que mostrar. Buena señal."
+
+#: admin/class-replace-page__premium_only.php:47
+#: admin/class-replace-page__premium_only.php:48
+#: admin/class-upsell-page.php:45
+#: admin/class-upsell-page.php:46
+msgid "Replace a URL"
+msgstr "Sustituir una URL"
+
+#: admin/class-replace-page__premium_only.php:144
+#: admin/class-upsell-page.php:76
+msgid "Replace a URL across the site"
+msgstr "Sustituir una URL en todo el sitio"
+
+#: admin/class-replace-page__premium_only.php:157
+msgid "Pick a link from the list first."
+msgstr "Elige antes un enlace de la lista."
+
+#: admin/class-replace-page__premium_only.php:174
+#: admin/class-upsell-page.php:77
+msgid "Replacing a URL everywhere at once is part of Onsite Link Verdict Pro."
+msgstr "Sustituir una URL en todas partes de una vez forma parte de Onsite Link Verdict Pro."
+
+#: admin/class-replace-page__premium_only.php:175
+#: admin/class-upsell-page.php:78
+msgid "The free version finds the broken links and tells you exactly which post or comment each one is in, so you can fix them in the editor. Pro does the mechanical part for you: it shows you every place a URL appears, lets you check the list, replaces it in one go, and keeps an undo."
+msgstr "La versión gratuita encuentra los enlaces rotos y te dice exactamente en qué entrada o comentario está cada uno, para que los arregles en el editor. Pro hace la parte mecánica por ti: te muestra todos los sitios donde aparece una URL, te deja revisar la lista, la sustituye de una vez y guarda un deshacer."
+
+#: admin/class-replace-page__premium_only.php:186
+msgid "Current URL"
+msgstr "URL actual"
+
+#: admin/class-replace-page__premium_only.php:189
+msgid "Replace with"
+msgstr "Sustituir por"
+
+#: admin/class-replace-page__premium_only.php:195
+msgid "Show me what will change"
+msgstr "Enséñame qué va a cambiar"
+
+#: admin/class-replace-page__premium_only.php:215
+msgid "This URL is no longer recorded anywhere. Run a scan and try again."
+msgstr "Esta URL ya no está registrada en ninguna parte. Ejecuta un análisis e inténtalo de nuevo."
+
+#: admin/class-replace-page__premium_only.php:224
+msgid "%1$d occurrences in %2$d places"
+msgstr "%1$d apariciones en %2$d sitios"
+
+#: admin/class-replace-page__premium_only.php:237
+msgid "Showing the first %1$d of %2$d places. The replacement runs in batches and tells you what is left."
+msgstr "Mostrando los primeros %1$d de %2$d sitios. La sustitución se hace por lotes y te dice lo que queda."
+
+#: admin/class-replace-page__premium_only.php:250
+msgid "%d place will not be touched. The reason is in the list below, and you can fix that one by hand."
+msgid_plural "%d places will not be touched. The reasons are in the list below, and you can fix those by hand."
+msgstr[0] "No se tocará %d sitio. El motivo está en la lista de abajo, y ese puedes arreglarlo a mano."
+msgstr[1] "No se tocarán %d sitios. Los motivos están en la lista de abajo, y esos puedes arreglarlos a mano."
+
+#: admin/class-replace-page__premium_only.php:263
+msgid "Where"
+msgstr "Dónde"
+
+#: admin/class-replace-page__premium_only.php:264
+msgid "Occurrences"
+msgstr "Apariciones"
+
+#: admin/class-replace-page__premium_only.php:265
+msgid "What will happen"
+msgstr "Qué va a pasar"
+
+#: admin/class-replace-page__premium_only.php:276
+msgid "Will be replaced"
+msgstr "Se sustituirá"
+
+#: admin/class-replace-page__premium_only.php:300
+msgid "Replace in %d place"
+msgid_plural "Replace in %d places"
+msgstr[0] "Sustituir en %d sitio"
+msgstr[1] "Sustituir en %d sitios"
+
+#: admin/class-replace-page__premium_only.php:318
+msgid "Nothing was changed."
+msgstr "No se ha cambiado nada."
+
+#: admin/class-replace-page__premium_only.php:326
+msgid "Replaced %1$d occurrences in %2$d places."
+msgstr "Sustituidas %1$d apariciones en %2$d sitios."
+
+#: admin/class-replace-page__premium_only.php:344
+msgid "%d place still to go."
+msgid_plural "%d places still to go."
+msgstr[0] "Queda %d sitio."
+msgstr[1] "Quedan %d sitios."
+
+#: admin/class-replace-page__premium_only.php:356
+msgid "Continue"
+msgstr "Continuar"
+
+#: admin/class-replace-page__premium_only.php:365
+msgid "Undo this"
+msgstr "Deshacer esto"
+
+#: admin/class-replace-page__premium_only.php:382
+msgid "Undone in %d places."
+msgstr "Deshecho en %d sitios."
+
+#: admin/class-replace-page__premium_only.php:407
+msgid "Not finished in these:"
+msgstr "Sin terminar en estos:"
+
+#: admin/class-replace-page__premium_only.php:431
+msgid "Left untouched:"
+msgstr "Dejados sin tocar:"
+
+#: includes/class-abilities.php:69
+msgid "Broken link checking that runs on this site."
+msgstr "Comprobación de enlaces rotos que se ejecuta en este sitio."
+
+#: includes/class-abilities.php:93
+msgid "Broken link summary"
+msgstr "Resumen de enlaces rotos"
+
+#: includes/class-abilities.php:94
+msgid "How many links on this site are broken, in warning, unverifiable, good or still waiting to be checked, and whether background checking can run. A link is only counted as broken when the server says the page is gone (404 or 410) or nothing answers at all; servers that refuse robots are counted as unverifiable, not broken."
+msgstr "Cuántos enlaces de este sitio están rotos, con aviso, no comprobables, correctos o aún pendientes de comprobar, y si la comprobación en segundo plano puede ejecutarse. Un enlace solo cuenta como roto cuando el servidor dice que la página ya no existe (404 o 410) o cuando nadie responde; los servidores que rechazan a los robots cuentan como no comprobables, no como rotos."
+
+#: includes/class-abilities.php:106
+msgid "List checked links"
+msgstr "Listar los enlaces comprobados"
+
+#: includes/class-abilities.php:107
+msgid "Lists the links in one result group (broken by default), each with its address, the plain-language explanation of the result, and the post, page or comment where it appears, with a link to edit it."
+msgstr "Lista los enlaces de un grupo de resultados (por defecto, los rotos), cada uno con su dirección, la explicación del resultado en lenguaje sencillo y la entrada, página o comentario donde aparece, con un enlace para editarlo."
+
+#: includes/class-abilities.php:118
+msgid "Which result group: broken, warning, unverifiable or ok."
+msgstr "Qué grupo de resultados: broken, warning, unverifiable u ok."
+
+#: includes/class-abilities.php:142
+msgid "Start a full-site link scan"
+msgstr "Iniciar un análisis de todo el sitio"
+
+#: includes/class-abilities.php:143
+msgid "Queues every post, page and comment for a fresh link scan, the same as the \"Start scan\" button. Nothing is checked during this request: the checking runs in small background batches, so results arrive over the following minutes or hours. Use the summary to follow progress."
+msgstr "Pone en cola todas las entradas, páginas y comentarios para un nuevo análisis de enlaces, igual que el botón \"Start scan\". No se comprueba nada durante esta petición: la comprobación se ejecuta en pequeños lotes en segundo plano, así que los resultados llegan en los minutos u horas siguientes. Usa el resumen para seguir el progreso."
+
+#: includes/class-cron.php:155
+msgid "Every 15 minutes (Onsite Link Verdict)"
+msgstr "Cada 15 minutos (Onsite Link Verdict)"
+
+#: includes/class-cron.php:160
+msgid "Every 5 minutes (Onsite Link Verdict)"
+msgstr "Cada 5 minutos (Onsite Link Verdict)"
+
+#: includes/class-exporter__premium_only.php:110
+msgid "Status"
+msgstr "Estado"
+
+#: includes/class-exporter__premium_only.php:111
+msgid "HTTP code"
+msgstr "Código HTTP"
+
+#: includes/class-exporter__premium_only.php:112
+msgid "What is happening"
+msgstr "Qué está pasando"
+
+#: includes/class-exporter__premium_only.php:113
+msgid "Found in"
+msgstr "Encontrado en"
+
+#: includes/class-exporter__premium_only.php:115
+msgid "Last checked"
+msgstr "Última comprobación"
+
+#: includes/class-exporter__premium_only.php:140
+msgid "*** Only the first %1$d rows are included. This list has %2$d. Fix some and export again. ***"
+msgstr "*** Solo se incluyen las primeras %1$d filas. Esta lista tiene %2$d. Arregla algunas y vuelve a exportar. ***"
+
+#: includes/class-exporter__premium_only.php:227
+msgid "%1$s #%2$d"
+msgstr "%1$s n.º %2$d"
+
+#: includes/class-pro-boot__premium_only.php:64
+msgid "You do not have permission to do this."
+msgstr "No tienes permisos para hacer esto."
+
+#: includes/class-replacer__premium_only.php:187
+msgid "Nothing changed in this content."
+msgstr "No ha cambiado nada en este contenido."
+
+#: includes/class-replacer__premium_only.php:220
+msgid "We could not save the undo record for this one, so we left it alone. Nothing was changed here."
+msgstr "No hemos podido guardar el registro para deshacer de este, así que lo hemos dejado en paz. Aquí no se ha cambiado nada."
+
+#: includes/class-replacer__premium_only.php:255
+msgid "Replaced in the content, but this page still shows the old address. It is also stored somewhere we will not edit — usually a page builder field or a shortcode attribute. Open it and change that one by hand."
+msgstr "Sustituido en el contenido, pero esta página sigue mostrando la dirección antigua. También está guardada en algún sitio que no vamos a editar, normalmente un campo de un maquetador o un atributo de shortcode. Ábrela y cambia esa a mano."
+
+#: includes/class-replacer__premium_only.php:315
+msgid "The new address is longer than %d characters. We cannot store the record that lets you undo this, and we will not change your content without it. Use a shorter address — usually the same one without the tracking parameters."
+msgstr "La dirección nueva supera los %d caracteres. No podemos guardar el registro que te permite deshacer esto, y no tocamos tu contenido sin él. Usa una dirección más corta, normalmente la misma sin los parámetros de seguimiento."
+
+#: includes/class-replacer__premium_only.php:348
+#: includes/class-replacer__premium_only.php:417
+msgid "The content no longer exists."
+msgstr "El contenido ya no existe."
+
+#: includes/class-replacer__premium_only.php:363
+msgid "This content was edited after the replacement. Left untouched."
+msgstr "Este contenido se editó después de la sustitución. Se ha dejado sin tocar."
+
+#: includes/class-replacer__premium_only.php:443
+msgid "We could not find this address in the content we would be saving. It usually comes from a page builder, a shortcode or a theme filter — but it may also be written in a form we do not recognise. Either way we will not touch it: open the item and change it there."
+msgstr "No hemos encontrado esta dirección en el contenido que íbamos a guardar. Suele venir de un maquetador, de un shortcode o de un filtro del tema, pero también puede estar escrita de una forma que no reconocemos. En cualquier caso no la tocamos: abre el elemento y cámbiala ahí."
+
+#: includes/class-replacer__premium_only.php:448
+msgid "You do not have permission to edit this."
+msgstr "No tienes permisos para editar esto."
+
+#: includes/class-replacer__premium_only.php:554
+msgid "Comment #%d"
+msgstr "Comentario n.º %d"
+
+#: includes/class-review-prompt.php:219
+msgid "Onsite Link Verdict has been checking your links for a while now."
+msgstr "Onsite Link Verdict lleva ya un tiempo comprobando tus enlaces."
+
+#: includes/class-review-prompt.php:220
+msgid "If it has been useful, a review on WordPress.org helps more than it looks: it is how other people find the plugin at all. It takes a minute and we read every one."
+msgstr "Si te ha resultado útil, una reseña en WordPress.org ayuda más de lo que parece: es la forma en que otras personas llegan a encontrar el plugin. Lleva un minuto y las leemos todas."
+
+#: includes/class-review-prompt.php:221
+msgid "And if something is not working the way you expected, tell us instead. That we can actually fix."
+msgstr "Y si algo no funciona como esperabas, cuéntanoslo a nosotros. Eso sí lo podemos arreglar."
+
+#: includes/class-review-prompt.php:228
+msgid "Write a review"
+msgstr "Escribir una reseña"
+
+#: includes/class-review-prompt.php:232
+msgid "I have a problem"
+msgstr "Tengo un problema"
+
+#: includes/class-review-prompt.php:236
+msgid "Not now"
+msgstr "Ahora no"
+
+#: includes/class-review-prompt.php:240
+msgid "Do not ask again"
+msgstr "No volver a preguntar"
+
+#: includes/class-review-prompt.php:259
+msgid "Thank you. The review page opens in a new tab:"
+msgstr "Gracias. La página de reseñas se abre en una pestaña nueva:"
+
+#: includes/class-review-prompt.php:261
+msgid "write a review on WordPress.org"
+msgstr "escribir una reseña en WordPress.org"
+
+#: includes/class-review-prompt.php:267
+msgid "Tell us what happened and we will look at it:"
+msgstr "Cuéntanos qué ha pasado y lo miramos:"
+
+#: includes/class-review-prompt.php:269
+msgid "support"
+msgstr "soporte"

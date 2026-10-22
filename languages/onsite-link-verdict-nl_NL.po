@@ -1,0 +1,642 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Onsite Link Verdict\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/onsite-link-verdict\n"
+"Last-Translator: Onsite Tools <support@onsitetools.dev>\n"
+"Language-Team: Onsite Tools\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: onsite-link-verdict\n"
+
+#: onsite-link-verdict.php
+msgid "Onsite Link Verdict — Broken Link Checker"
+msgstr "Onsite Link Verdict — Controle op dode links"
+
+#: onsite-link-verdict.php
+msgid "https://onsitetools.dev/onsite-link-verdict/"
+msgstr ""
+
+#: onsite-link-verdict.php
+msgid "Finds broken links on your site. The checking runs on your own server — no cloud service, no account, no signup, no credits."
+msgstr "Vindt dode links op je site. De controle draait op je eigen server: geen clouddienst, geen account, geen registratie, geen credits."
+
+#: onsite-link-verdict.php
+msgid "Onsite Tools"
+msgstr ""
+
+#: onsite-link-verdict.php
+msgid "https://profiles.wordpress.org/onsitetools/"
+msgstr ""
+
+#: admin/class-admin-page.php:45
+#: admin/class-admin-page.php:46
+#: admin/class-admin-page.php:654
+#: includes/class-abilities.php:68
+msgid "Onsite Link Verdict"
+msgstr ""
+
+#: admin/class-admin-page.php:88
+msgid "%d — the server answered this every time we asked. It is refusing automated checks, not telling us the page is gone. Open it in your browser to confirm."
+msgstr "%d — de server antwoordde dit elke keer dat we het vroegen. Hij weigert automatische controles; hij zegt niet dat de pagina weg is. Open hem in je browser om dat te bevestigen."
+
+#: admin/class-admin-page.php:93
+msgid "The domain no longer exists."
+msgstr "Het domein bestaat niet meer."
+
+#: admin/class-admin-page.php:94
+msgid "The server took too long to respond."
+msgstr "De server deed er te lang over om te antwoorden."
+
+#: admin/class-admin-page.php:95
+msgid "The destination's security certificate has problems."
+msgstr "Het beveiligingscertificaat van de bestemming heeft problemen."
+
+#: admin/class-admin-page.php:96
+msgid "Could not connect to the server."
+msgstr "Kon geen verbinding maken met de server."
+
+#: admin/class-admin-page.php:97
+msgid "The redirects go in circles and never arrive anywhere."
+msgstr "De doorverwijzingen draaien in een kring en komen nergens aan."
+
+#: admin/class-admin-page.php:98
+msgid "Too many redirects in a chain."
+msgstr "Te veel doorverwijzingen achter elkaar."
+
+#: admin/class-admin-page.php:101
+msgid "Could not check this link."
+msgstr "Kon deze link niet controleren."
+
+#: admin/class-admin-page.php:123
+msgid "This page is on your site but is not published (status: %s), so visitors get a 404. Publish it, or point the link somewhere else."
+msgstr "Deze pagina hoort bij je site maar is niet gepubliceerd (status: %s), dus bezoekers krijgen een 404. Publiceer hem, of laat de link ergens anders naartoe wijzen."
+
+#: admin/class-admin-page.php:129
+msgid "404 — the page no longer exists."
+msgstr "404 — de pagina bestaat niet meer."
+
+#: admin/class-admin-page.php:130
+msgid "410 — the page was permanently removed."
+msgstr "410 — de pagina is definitief verwijderd."
+
+#: admin/class-admin-page.php:131
+msgid "403 — the server blocks automated checks. The link is probably fine; open it in your browser to confirm."
+msgstr "403 — de server blokkeert automatische controles. De link is waarschijnlijk in orde; open hem in je browser om dat te bevestigen."
+
+#: admin/class-admin-page.php:132
+msgid "401 — the page requires authentication."
+msgstr "401 — de pagina vraagt om inloggen."
+
+#: admin/class-admin-page.php:133
+msgid "429 — we were asked to slow down. We will try again later."
+msgstr "429 — er is ons gevraagd rustiger aan te doen. We proberen het later opnieuw."
+
+#: admin/class-admin-page.php:134
+msgid "451 — blocked for legal reasons."
+msgstr "451 — geblokkeerd om juridische redenen."
+
+#: admin/class-admin-page.php:135
+msgid "999 — a response some sites (such as LinkedIn) give to bots. This is not a broken link."
+msgstr "999 — een antwoord dat sommige sites (zoals LinkedIn) aan bots geven. Dit is geen dode link."
+
+#: admin/class-admin-page.php:136
+msgid "500 — error on the destination server. This may be temporary."
+msgstr "500 — fout op de server van de bestemming. Dit kan tijdelijk zijn."
+
+#: admin/class-admin-page.php:137
+msgid "502 — the destination server is having problems. This may be temporary."
+msgstr "502 — de server van de bestemming heeft problemen. Dit kan tijdelijk zijn."
+
+#: admin/class-admin-page.php:138
+msgid "503 — service temporarily unavailable."
+msgstr "503 — dienst tijdelijk niet beschikbaar."
+
+#: admin/class-admin-page.php:146
+msgid "Not checked yet."
+msgstr "Nog niet gecontroleerd."
+
+#: admin/class-admin-page.php:150
+msgid "The server responded %d."
+msgstr "De server antwoordde %d."
+
+#: admin/class-admin-page.php:269
+msgid "Speed saved."
+msgstr "Snelheid opgeslagen."
+
+#: admin/class-admin-page.php:274
+msgid "Speed saved. At this pace the queue takes about %s."
+msgstr "Snelheid opgeslagen. In dit tempo duurt de wachtrij ongeveer %s."
+
+#: admin/class-admin-page.php:292
+msgid "%s hour"
+msgid_plural "%s hours"
+msgstr[0] "%s uur"
+msgstr[1] "%s uur"
+
+#: admin/class-admin-page.php:301
+msgid "%s day"
+msgid_plural "%s days"
+msgstr[0] "%s dag"
+msgstr[1] "%s dagen"
+
+#: admin/class-admin-page.php:336
+msgid "Careful"
+msgstr "Voorzichtig"
+
+#: admin/class-admin-page.php:337
+msgid "The lightest setting. Use it on shared or slow hosting, or if your host has complained about background work before."
+msgstr "De lichtste instelling. Gebruik hem bij gedeelde of trage hosting, of als je hoster eerder heeft geklaagd over werk op de achtergrond."
+
+#: admin/class-admin-page.php:340
+msgid "Normal"
+msgstr "Normaal"
+
+#: admin/class-admin-page.php:341
+msgid "The balance we recommend, and what most sites should stay on."
+msgstr "De balans die we aanraden, en waar de meeste sites op zouden moeten blijven."
+
+#: admin/class-admin-page.php:344
+msgid "Fast"
+msgstr "Snel"
+
+#: admin/class-admin-page.php:345
+msgid "Your host has to be able to take it — and so do the sites you link to. Some of them will start refusing the checks, which means more links end up in \"Couldn't verify\". Faster is not always better."
+msgstr "Je hoster moet het aankunnen — en de sites waarnaar je linkt ook. Sommige gaan de controles weigeren, waardoor er meer links in «Kon niet controleren» belanden. Sneller is niet altijd beter."
+
+#: admin/class-admin-page.php:350
+msgid "How fast should it check?"
+msgstr "Hoe snel moet er gecontroleerd worden?"
+
+#: admin/class-admin-page.php:351
+msgid "Finding the links is quick. Checking whether they are alive is the slow part, and this is where you decide how much of your server it may use."
+msgstr "De links vinden gaat snel. Controleren of ze leven is het trage deel, en hier bepaal je hoeveel van je server dat mag gebruiken."
+
+#: admin/class-admin-page.php:373
+msgid "Up to %1$s links an hour."
+msgstr "Tot %1$s links per uur."
+
+#: admin/class-admin-page.php:381
+msgid "With the %1$s links waiting on this site: about %2$s."
+msgstr "Met de %1$s links die op deze site wachten: ongeveer %2$s."
+
+#: admin/class-admin-page.php:393
+msgid "Save speed"
+msgstr "Snelheid opslaan"
+
+#: admin/class-admin-page.php:433
+msgid "%d rule saved. It takes effect as each post is checked again."
+msgid_plural "%d rules saved. They take effect as each post is checked again."
+msgstr[0] "%d regel opgeslagen. Die gaat gelden zodra elk bericht opnieuw wordt gecontroleerd."
+msgstr[1] "%d regels opgeslagen. Die gaan gelden zodra elk bericht opnieuw wordt gecontroleerd."
+
+#: admin/class-admin-page.php:464
+#: includes/class-abilities.php:257
+msgid "Scan scheduled. Links will be checked in the background."
+msgstr "Scan ingepland. De links worden op de achtergrond gecontroleerd."
+
+#: admin/class-admin-page.php:494
+msgid "This link has been queued for a new check."
+msgstr "Deze link staat in de rij voor een nieuwe controle."
+
+#: admin/class-admin-page.php:554
+msgid "%s link waiting to be checked."
+msgid_plural "%s links waiting to be checked."
+msgstr[0] "%s link wacht op controle."
+msgstr[1] "%s links wachten op controle."
+
+#: admin/class-admin-page.php:570
+msgid "%1$s of %2$s links checked (%3$s%%)."
+msgstr "%1$s van %2$s links gecontroleerd (%3$s%%)."
+
+#: admin/class-admin-page.php:612
+msgid "Should be done within the hour."
+msgstr "Zou binnen het uur klaar moeten zijn."
+
+#: admin/class-admin-page.php:618
+msgid "At most about %s hours left."
+msgstr "Hooguit nog ongeveer %s uur."
+
+#: admin/class-admin-page.php:627
+msgid "At most about %s day left."
+msgid_plural "At most about %s days left."
+msgstr[0] "Hooguit nog ongeveer %s dag."
+msgstr[1] "Hooguit nog ongeveer %s dagen."
+
+#: admin/class-admin-page.php:635
+#: admin/class-replace-page__premium_only.php:133
+#: admin/class-upsell-page.php:72
+msgid "You do not have permission to view this page."
+msgstr "Je hebt geen rechten om deze pagina te bekijken."
+
+#: admin/class-admin-page.php:658
+msgid "WordPress cron is disabled on this site (DISABLE_WP_CRON). Automatic checks will not run until you set up a real cron job with your host."
+msgstr "De WordPress-cron staat uit op deze site (DISABLE_WP_CRON). Automatische controles draaien pas als je bij je hoster een echte cronjob instelt."
+
+#: admin/class-admin-page.php:675
+msgid "Start scan"
+msgstr "Scan starten"
+
+#: admin/class-admin-page.php:679
+msgid "Broken"
+msgstr "Dood"
+
+#: admin/class-admin-page.php:680
+msgid "Warnings"
+msgstr "Waarschuwingen"
+
+#: admin/class-admin-page.php:681
+msgid "Unverifiable"
+msgstr "Niet te controleren"
+
+#: admin/class-admin-page.php:682
+msgid "Good"
+msgstr "In orde"
+
+#: admin/class-admin-page.php:757
+msgid "One item has more links than we check in one pass (%d)."
+msgid_plural "Some items have more links than we check in one pass (%d)."
+msgstr[0] "Eén item heeft meer links dan we in één ronde controleren (%d)."
+msgstr[1] "Sommige items hebben meer links dan we in één ronde controleren (%d)."
+
+#: admin/class-admin-page.php:767
+msgid "The rest of the links in them have not been checked. Splitting the content into more than one page is the reliable fix."
+msgstr "De overige links daarin zijn niet gecontroleerd. De inhoud over meer dan één pagina verdelen is de betrouwbare oplossing."
+
+#: admin/class-admin-page.php:771
+msgid "%d links"
+msgstr "%d links"
+
+#: admin/class-admin-page.php:796
+msgid "Some links are too long to check."
+msgstr "Sommige links zijn te lang om te controleren."
+
+#: admin/class-admin-page.php:798
+msgid "They are longer than 2048 characters — usually an address stuffed with tracking parameters. We do not shorten them, because a shortened address is a different address and would show up as broken when it is not."
+msgstr "Ze zijn langer dan 2048 tekens — meestal een adres volgepropt met trackingparameters. We korten ze niet in, want een ingekort adres is een ander adres en zou als dood verschijnen terwijl het dat niet is."
+
+#: admin/class-admin-page.php:802
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] "%d link"
+msgstr[1] "%d links"
+
+#: admin/class-admin-page.php:826
+#: admin/class-links-list-table.php:151
+#: includes/class-exporter__premium_only.php:232
+#: includes/class-replacer__premium_only.php:559
+msgid "(no title)"
+msgstr "(geen titel)"
+
+#: admin/class-admin-page.php:852
+msgid "Onsite Link Verdict Pro"
+msgstr ""
+
+#: admin/class-admin-page.php:874
+msgid "The Pro package is installed, but the licence is not active yet."
+msgstr "Het Pro-pakket is geïnstalleerd, maar de licentie is nog niet actief."
+
+#: admin/class-admin-page.php:875
+msgid "If you have just entered your key, there is one step left: a confirmation email was sent to the address on this site, and Pro stays off until you click the button inside it. Look in your spam folder — that is where ours landed in testing."
+msgstr "Als je de sleutel net hebt ingevoerd, ontbreekt er nog één stap: er is een bevestigingsmail gestuurd naar het adres van deze site, en Pro blijft uit tot je op de knop erin klikt. Kijk in je spammap — daar belandde die van ons tijdens het testen."
+
+#: admin/class-admin-page.php:876
+msgid "Nothing was lost and nothing needs paying again. The features below turn on by themselves once the licence is confirmed."
+msgstr "Er is niets verloren gegaan en er hoeft niets opnieuw betaald te worden. De functies hieronder gaan vanzelf aan zodra de licentie bevestigd is."
+
+#: admin/class-admin-page.php:881
+msgid "Pro adds the mechanical work: replace a URL everywhere at once (with a preview and an undo), silence domains you never want to hear about again, and export the list to CSV."
+msgstr "Pro doet het mechanische werk: een URL overal in één keer vervangen (met voorbeeld en ongedaan maken), domeinen het zwijgen opleggen waar je nooit meer van wilt horen, en de lijst naar CSV exporteren."
+
+#: admin/class-admin-page.php:898
+msgid "Export this tab to CSV"
+msgstr "Dit tabblad naar CSV exporteren"
+
+#: admin/class-admin-page.php:907
+msgid "Never check these"
+msgstr "Deze nooit controleren"
+
+#: admin/class-admin-page.php:908
+msgid "One pattern per line. Use * for anything. A line with no * means \"contains\". Lines starting with # are notes."
+msgstr "Eén patroon per regel. Gebruik * voor van alles. Een regel zonder * betekent «bevat». Regels die met # beginnen zijn notities."
+
+#: admin/class-admin-page.php:912
+msgid "Save rules"
+msgstr "Regels opslaan"
+
+#: admin/class-admin-page.php:913
+msgid "Rules apply as each post is checked again, not all at once. On a large site the list takes a few background runs to catch up."
+msgstr "De regels gaan gelden zodra elk bericht opnieuw wordt gecontroleerd, niet allemaal tegelijk. Op een grote site heeft de lijst een paar rondes op de achtergrond nodig om bij te komen."
+
+#: admin/class-links-list-table.php:42
+#: includes/class-exporter__premium_only.php:114
+msgid "Link text"
+msgstr "Linktekst"
+
+#: admin/class-links-list-table.php:43
+#: includes/class-exporter__premium_only.php:109
+msgid "URL"
+msgstr "URL"
+
+#: admin/class-links-list-table.php:44
+msgid "What's happening"
+msgstr "Wat er aan de hand is"
+
+#: admin/class-links-list-table.php:45
+msgid "Where it is"
+msgstr "Waar hij staat"
+
+#: admin/class-links-list-table.php:46
+msgid "Checked"
+msgstr "Gecontroleerd"
+
+#: admin/class-links-list-table.php:74
+msgid "(no text)"
+msgstr "(geen tekst)"
+
+#: admin/class-links-list-table.php:105
+msgid "Recheck"
+msgstr "Opnieuw controleren"
+
+#: admin/class-links-list-table.php:120
+msgid "Replace everywhere"
+msgstr "Overal vervangen"
+
+#: admin/class-links-list-table.php:171
+msgid "ago"
+msgstr "geleden"
+
+#: admin/class-links-list-table.php:172
+msgid "not yet"
+msgstr "nog niet"
+
+#: admin/class-links-list-table.php:179
+msgid "Nothing to show here. Good news."
+msgstr "Hier valt niets te tonen. Goed nieuws."
+
+#: admin/class-replace-page__premium_only.php:47
+#: admin/class-replace-page__premium_only.php:48
+#: admin/class-upsell-page.php:45
+#: admin/class-upsell-page.php:46
+msgid "Replace a URL"
+msgstr "Een URL vervangen"
+
+#: admin/class-replace-page__premium_only.php:144
+#: admin/class-upsell-page.php:76
+msgid "Replace a URL across the site"
+msgstr "Een URL op de hele site vervangen"
+
+#: admin/class-replace-page__premium_only.php:157
+msgid "Pick a link from the list first."
+msgstr "Kies eerst een link uit de lijst."
+
+#: admin/class-replace-page__premium_only.php:174
+#: admin/class-upsell-page.php:77
+msgid "Replacing a URL everywhere at once is part of Onsite Link Verdict Pro."
+msgstr "Een URL overal in één keer vervangen hoort bij Onsite Link Verdict Pro."
+
+#: admin/class-replace-page__premium_only.php:175
+#: admin/class-upsell-page.php:78
+msgid "The free version finds the broken links and tells you exactly which post or comment each one is in, so you can fix them in the editor. Pro does the mechanical part for you: it shows you every place a URL appears, lets you check the list, replaces it in one go, and keeps an undo."
+msgstr "De gratis versie vindt de dode links en zegt precies in welk bericht of welke reactie elke link staat, zodat je ze in de editor kunt herstellen. Pro doet het mechanische deel voor je: het laat elke plek zien waar een URL voorkomt, laat je de lijst nakijken, vervangt hem in één keer en bewaart een ongedaan maken."
+
+#: admin/class-replace-page__premium_only.php:186
+msgid "Current URL"
+msgstr "Huidige URL"
+
+#: admin/class-replace-page__premium_only.php:189
+msgid "Replace with"
+msgstr "Vervangen door"
+
+#: admin/class-replace-page__premium_only.php:195
+msgid "Show me what will change"
+msgstr "Laat zien wat er verandert"
+
+#: admin/class-replace-page__premium_only.php:215
+msgid "This URL is no longer recorded anywhere. Run a scan and try again."
+msgstr "Deze URL is nergens meer vastgelegd. Voer een scan uit en probeer het opnieuw."
+
+#: admin/class-replace-page__premium_only.php:224
+msgid "%1$d occurrences in %2$d places"
+msgstr "%1$d keer op %2$d plekken"
+
+#: admin/class-replace-page__premium_only.php:237
+msgid "Showing the first %1$d of %2$d places. The replacement runs in batches and tells you what is left."
+msgstr "De eerste %1$d van %2$d plekken worden getoond. Het vervangen gaat in porties en zegt je wat er nog over is."
+
+#: admin/class-replace-page__premium_only.php:250
+msgid "%d place will not be touched. The reason is in the list below, and you can fix that one by hand."
+msgid_plural "%d places will not be touched. The reasons are in the list below, and you can fix those by hand."
+msgstr[0] "%d plek wordt niet aangeraakt. De reden staat in de lijst hieronder, en die ene kun je met de hand herstellen."
+msgstr[1] "%d plekken worden niet aangeraakt. De redenen staan in de lijst hieronder, en die kun je met de hand herstellen."
+
+#: admin/class-replace-page__premium_only.php:263
+msgid "Where"
+msgstr "Waar"
+
+#: admin/class-replace-page__premium_only.php:264
+msgid "Occurrences"
+msgstr "Aantal keer"
+
+#: admin/class-replace-page__premium_only.php:265
+msgid "What will happen"
+msgstr "Wat er gaat gebeuren"
+
+#: admin/class-replace-page__premium_only.php:276
+msgid "Will be replaced"
+msgstr "Wordt vervangen"
+
+#: admin/class-replace-page__premium_only.php:300
+msgid "Replace in %d place"
+msgid_plural "Replace in %d places"
+msgstr[0] "Op %d plek vervangen"
+msgstr[1] "Op %d plekken vervangen"
+
+#: admin/class-replace-page__premium_only.php:318
+msgid "Nothing was changed."
+msgstr "Er is niets gewijzigd."
+
+#: admin/class-replace-page__premium_only.php:326
+msgid "Replaced %1$d occurrences in %2$d places."
+msgstr "%1$d keer vervangen op %2$d plekken."
+
+#: admin/class-replace-page__premium_only.php:344
+msgid "%d place still to go."
+msgid_plural "%d places still to go."
+msgstr[0] "Nog %d plek te gaan."
+msgstr[1] "Nog %d plekken te gaan."
+
+#: admin/class-replace-page__premium_only.php:356
+msgid "Continue"
+msgstr "Doorgaan"
+
+#: admin/class-replace-page__premium_only.php:365
+msgid "Undo this"
+msgstr "Dit ongedaan maken"
+
+#: admin/class-replace-page__premium_only.php:382
+msgid "Undone in %d places."
+msgstr "Ongedaan gemaakt op %d plekken."
+
+#: admin/class-replace-page__premium_only.php:407
+msgid "Not finished in these:"
+msgstr "Niet afgemaakt bij deze:"
+
+#: admin/class-replace-page__premium_only.php:431
+msgid "Left untouched:"
+msgstr "Onaangeroerd gelaten:"
+
+#: includes/class-abilities.php:69
+msgid "Broken link checking that runs on this site."
+msgstr "Controle op dode links die op deze site draait."
+
+#: includes/class-abilities.php:93
+msgid "Broken link summary"
+msgstr "Overzicht van dode links"
+
+#: includes/class-abilities.php:94
+msgid "How many links on this site are broken, in warning, unverifiable, good or still waiting to be checked, and whether background checking can run. A link is only counted as broken when the server says the page is gone (404 or 410) or nothing answers at all; servers that refuse robots are counted as unverifiable, not broken."
+msgstr "Hoeveel links op deze site dood zijn, een waarschuwing hebben, niet te controleren zijn, in orde zijn of nog op controle wachten, en of de controle op de achtergrond kan draaien. Een link telt alleen als dood wanneer de server zegt dat de pagina weg is (404 of 410) of wanneer er helemaal niets antwoordt; servers die robots weigeren tellen als niet te controleren, niet als dood."
+
+#: includes/class-abilities.php:106
+msgid "List checked links"
+msgstr "Gecontroleerde links tonen"
+
+#: includes/class-abilities.php:107
+msgid "Lists the links in one result group (broken by default), each with its address, the plain-language explanation of the result, and the post, page or comment where it appears, with a link to edit it."
+msgstr "Toont de links in één resultaatgroep (standaard de dode), elk met het adres, de uitleg van het resultaat in gewone taal en het bericht, de pagina of de reactie waarin de link staat, met een link om die te bewerken."
+
+#: includes/class-abilities.php:118
+msgid "Which result group: broken, warning, unverifiable or ok."
+msgstr "Welke resultaatgroep: broken, warning, unverifiable of ok."
+
+#: includes/class-abilities.php:142
+msgid "Start a full-site link scan"
+msgstr "Een scan van de hele site starten"
+
+#: includes/class-abilities.php:143
+msgid "Queues every post, page and comment for a fresh link scan, the same as the \"Start scan\" button. Nothing is checked during this request: the checking runs in small background batches, so results arrive over the following minutes or hours. Use the summary to follow progress."
+msgstr "Zet alle berichten, pagina's en reacties in de wachtrij voor een nieuwe linkscan, net als de knop \"Start scan\". Tijdens dit verzoek wordt niets gecontroleerd: de controle draait in kleine porties op de achtergrond, dus de resultaten komen in de minuten of uren daarna. Gebruik het overzicht om de voortgang te volgen."
+
+#: includes/class-cron.php:155
+msgid "Every 15 minutes (Onsite Link Verdict)"
+msgstr "Elke 15 minuten (Onsite Link Verdict)"
+
+#: includes/class-cron.php:160
+msgid "Every 5 minutes (Onsite Link Verdict)"
+msgstr "Elke 5 minuten (Onsite Link Verdict)"
+
+#: includes/class-exporter__premium_only.php:110
+msgid "Status"
+msgstr "Status"
+
+#: includes/class-exporter__premium_only.php:111
+msgid "HTTP code"
+msgstr "HTTP-code"
+
+#: includes/class-exporter__premium_only.php:112
+msgid "What is happening"
+msgstr "Wat er gebeurt"
+
+#: includes/class-exporter__premium_only.php:113
+msgid "Found in"
+msgstr "Gevonden in"
+
+#: includes/class-exporter__premium_only.php:115
+msgid "Last checked"
+msgstr "Laatst gecontroleerd"
+
+#: includes/class-exporter__premium_only.php:140
+msgid "*** Only the first %1$d rows are included. This list has %2$d. Fix some and export again. ***"
+msgstr "*** Alleen de eerste %1$d regels zijn opgenomen. Deze lijst heeft er %2$d. Herstel er een paar en exporteer opnieuw. ***"
+
+#: includes/class-exporter__premium_only.php:227
+msgid "%1$s #%2$d"
+msgstr "%1$s nr. %2$d"
+
+#: includes/class-pro-boot__premium_only.php:64
+msgid "You do not have permission to do this."
+msgstr "Je hebt geen rechten om dit te doen."
+
+#: includes/class-replacer__premium_only.php:187
+msgid "Nothing changed in this content."
+msgstr "Er is niets veranderd in deze inhoud."
+
+#: includes/class-replacer__premium_only.php:220
+msgid "We could not save the undo record for this one, so we left it alone. Nothing was changed here."
+msgstr "We konden voor deze het ongedaan-maken niet vastleggen, dus hebben we hem met rust gelaten. Hier is niets gewijzigd."
+
+#: includes/class-replacer__premium_only.php:255
+msgid "Replaced in the content, but this page still shows the old address. It is also stored somewhere we will not edit — usually a page builder field or a shortcode attribute. Open it and change that one by hand."
+msgstr "Vervangen in de inhoud, maar deze pagina toont nog steeds het oude adres. Het staat ook opgeslagen op een plek die we niet bewerken — meestal een veld van een paginabouwer of een shortcode-attribuut. Open hem en verander die met de hand."
+
+#: includes/class-replacer__premium_only.php:315
+msgid "The new address is longer than %d characters. We cannot store the record that lets you undo this, and we will not change your content without it. Use a shorter address — usually the same one without the tracking parameters."
+msgstr "Het nieuwe adres is langer dan %d tekens. We kunnen het record dat je dit laat terugdraaien niet opslaan, en zonder dat raken we je inhoud niet aan. Gebruik een korter adres — meestal hetzelfde zonder de trackingparameters."
+
+#: includes/class-replacer__premium_only.php:348
+#: includes/class-replacer__premium_only.php:417
+msgid "The content no longer exists."
+msgstr "De inhoud bestaat niet meer."
+
+#: includes/class-replacer__premium_only.php:363
+msgid "This content was edited after the replacement. Left untouched."
+msgstr "Deze inhoud is na het vervangen bewerkt. Onaangeroerd gelaten."
+
+#: includes/class-replacer__premium_only.php:443
+msgid "We could not find this address in the content we would be saving. It usually comes from a page builder, a shortcode or a theme filter — but it may also be written in a form we do not recognise. Either way we will not touch it: open the item and change it there."
+msgstr "We konden dit adres niet vinden in de inhoud die we zouden opslaan. Meestal komt het uit een paginabouwer, een shortcode of een filter van het thema — maar het kan ook geschreven zijn in een vorm die we niet herkennen. Hoe dan ook raken we het niet aan: open het item en verander het daar."
+
+#: includes/class-replacer__premium_only.php:448
+msgid "You do not have permission to edit this."
+msgstr "Je hebt geen rechten om dit te bewerken."
+
+#: includes/class-replacer__premium_only.php:554
+msgid "Comment #%d"
+msgstr "Reactie nr. %d"
+
+#: includes/class-review-prompt.php:219
+msgid "Onsite Link Verdict has been checking your links for a while now."
+msgstr "Onsite Link Verdict controleert je links inmiddels al een tijdje."
+
+#: includes/class-review-prompt.php:220
+msgid "If it has been useful, a review on WordPress.org helps more than it looks: it is how other people find the plugin at all. It takes a minute and we read every one."
+msgstr "Als het nuttig is geweest, helpt een beoordeling op WordPress.org meer dan je denkt: zo vinden anderen de plugin überhaupt. Het kost een minuut en we lezen ze allemaal."
+
+#: includes/class-review-prompt.php:221
+msgid "And if something is not working the way you expected, tell us instead. That we can actually fix."
+msgstr "En als iets niet werkt zoals je verwachtte, vertel het dan liever ons. Dat kunnen we echt oplossen."
+
+#: includes/class-review-prompt.php:228
+msgid "Write a review"
+msgstr "Een beoordeling schrijven"
+
+#: includes/class-review-prompt.php:232
+msgid "I have a problem"
+msgstr "Ik heb een probleem"
+
+#: includes/class-review-prompt.php:236
+msgid "Not now"
+msgstr "Niet nu"
+
+#: includes/class-review-prompt.php:240
+msgid "Do not ask again"
+msgstr "Niet meer vragen"
+
+#: includes/class-review-prompt.php:259
+msgid "Thank you. The review page opens in a new tab:"
+msgstr "Bedankt. De beoordelingspagina opent in een nieuw tabblad:"
+
+#: includes/class-review-prompt.php:261
+msgid "write a review on WordPress.org"
+msgstr "een beoordeling schrijven op WordPress.org"
+
+#: includes/class-review-prompt.php:267
+msgid "Tell us what happened and we will look at it:"
+msgstr "Vertel ons wat er gebeurd is, dan kijken we ernaar:"
+
+#: includes/class-review-prompt.php:269
+msgid "support"
+msgstr "ondersteuning"

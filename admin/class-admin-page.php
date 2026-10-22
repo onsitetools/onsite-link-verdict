@@ -458,11 +458,8 @@ class Admin_Page {
             return null;
         }
 
-        if ( ! wp_next_scheduled( Cron::HOOK_QUEUE_ALL ) ) {
-            wp_schedule_single_event( time() + 10, Cron::HOOK_QUEUE_ALL );
-        }
-
-        $this->agendar_passagem_do_lote();
+        // O mesmo pedido que a ability start-scan faz. Ver Cron::request_full_scan().
+        ( new Cron() )->request_full_scan();
 
         return __( 'Scan scheduled. Links will be checked in the background.', 'onsite-link-verdict' );
     }
@@ -640,6 +637,15 @@ class Admin_Page {
 
         $mensagem = $this->handle_actions();
 
+        /*
+         * O convite a avaliar. Fica ANTES do resto de propósito: quando o
+         * utilizador carrega num dos botões, a resposta tem de ser tratada no
+         * mesmo pedido, senão o convite volta a aparecer por baixo da própria
+         * confirmação.
+         */
+        $convite          = new Review_Prompt( $this->store );
+        $resposta_convite = $convite->handle_action();
+
         $contas = $this->store->count_by_status();
         $aba    = $this->current_tab();
         $cron   = new Cron( $this->store );
@@ -655,6 +661,12 @@ class Admin_Page {
 
         if ( null !== $mensagem ) {
             echo '<div class="notice notice-success is-dismissible"><p>' . esc_html( $mensagem ) . '</p></div>';
+        }
+
+        if ( false !== $resposta_convite ) {
+            echo $convite->render_seguimento( $resposta_convite ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- montado e escapado no próprio método.
+        } elseif ( $convite->deve_mostrar() ) {
+            echo $convite->render(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- montado e escapado no próprio método.
         }
 
         echo '<form method="post" style="margin: 1em 0;">';

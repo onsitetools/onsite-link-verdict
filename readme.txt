@@ -1,18 +1,20 @@
 === Onsite Link Verdict — Broken Link Checker ===
 Contributors: onsitetools
-Tags: broken links, link checker, dead links, 404, seo
+Tags: broken links, link checker, dead links, 404, broken link checker
 Requires at least: 6.1
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.6.6
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A broken link checker that runs on your own server: finds dead links and images, with no cloud service, no account and no credits.
+Broken link checker that calls a link broken only with proof, so links that open fine in your browser stay off the list. No account, no cloud.
 
 == Description ==
 
-Onsite Link Verdict checks the links and images in your posts, pages and comments and tells you which ones are dead.
+Onsite Link Verdict checks the links and images in your whole WordPress site (posts, pages, custom post types and comments) and tells you which ones are dead. Install it, and you can check links in WordPress from your own dashboard, on the same server that runs the site.
+
+A server that refuses a robot is not taken as proof that the page is gone. Links to LinkedIn (`999`), Amazon (`429`, `503`), X (`403`) or a site behind a bot firewall are kept out of your list of broken links: refusals go to their own tab, "Unverifiable", and server errors wait under "Warnings" to be checked again. And the checking runs in small background batches, so it does not slow down your site.
 
 = It knows the difference between "broken" and "I could not check it" =
 
@@ -27,6 +29,12 @@ So Onsite Link Verdict only ever calls a link broken when it has proof:
 
 **Everything else goes to a separate "Unverifiable" tab**, with a plain-language note about what happened. If a server answered us — with `403`, `503`, a rate limit, a challenge page, anything that is not `404` or `410` — it answered, and that is not proof the page died. Your list of real problems stays short, and short means believable.
 
+= It speaks your language =
+
+The plugin ships translated into **Portuguese (Portugal), Portuguese (Brazil), Spanish, French, German, Italian and Dutch**, as well as English. That includes the explanations, not just the buttons — which is the point: `403` reads the same in every language, and "the server is refusing automated checks, it is not saying the page is gone" does not.
+
+If your language is missing, the translation template in `/languages` is generated from the current version and covers every text in the plugin.
+
 = It runs on your own server, and stays out of the way =
 
 There is no account to create, no cloud service and no credit card. Your posts, pages and comments are not uploaded anywhere — see "External services" below for everything that does leave your site, and why.
@@ -34,9 +42,9 @@ There is no account to create, no cloud service and no credit card. Your posts, 
 Checking links is real work for the same server that answers your readers. Onsite Link Verdict is built around that:
 
 * **No checking work happens inside the page your visitor is waiting for.** It runs on your site's cron, in a request of its own.
-* **At most 100 links per run, and never more than 45 seconds of wall clock**, whichever comes first. Both are configurable; both are hard ceilings, not intentions.
+* **No new check starts after 45 seconds of wall clock in a run.** How many links fit in a run depends on the speed you choose (100, 400 or 1,000), and the time limit applies at every speed. Whatever is left waits in the queue for the next run.
 * `HEAD` requests first, falling back to `GET` only when a verdict depends on it. At most 2 KB of any response body is ever read.
-* The same URL repeated across fifty posts is fetched **once**, not fifty times. Measured: 90 links across 15 posts, pointing at 6 different addresses, cost **8 requests**.
+* The same URL repeated across fifty posts is fetched **once** per run, not fifty times. Measured: 90 links across 15 posts, pointing at 6 different addresses, cost **8 requests**.
 * A site that already told us it does not talk to robots is not asked again the next day.
 
 = What it checks =
@@ -61,7 +69,7 @@ What that buys you:
 
 The privacy note for the plugin is at https://onsitetools.dev/privacy/ and says the same thing in more detail.
 
-Once the first sweep is done it keeps monitoring. Every link is checked again after a week, and one that is failing after a day, so a page that dies next month turns up next month — you do not have to remember to run an audit.
+Once the first sweep is done it stays on as a broken link monitor. Every link is checked again after a week, and one that is failing after a day, so a page that dies next month turns up next month — you do not have to remember to run an audit.
 
 = What you get =
 
@@ -76,6 +84,7 @@ Once the first sweep is done it keeps monitoring. Every link is checked again af
 * Entries disappear when the content does: remove a link from a post, trash the post, or delete a comment, and the entry leaves the list. The table does not grow forever
 * Warns you if your site's cron is disabled, so checks do not silently never run
 * Clean uninstall — removes its table, options and scheduled events
+* **Ask your AI assistant.** On WordPress 6.9 and later, the plugin registers three abilities that an AI assistant connected to the site can use: a summary of how many links are broken, the list of broken links with where each one is, and a request for a full-site scan. Only administrators can use them, and nothing is checked during the request
 
 = What it does not do =
 
@@ -158,6 +167,46 @@ the result of every check is stored in a table in your own database.
 
 == Frequently Asked Questions ==
 
+= My link checker says a link is broken, but it works when I click it. Why? =
+
+Almost always, the link is fine. Many servers answer an automated request differently from a person with a browser: they refuse it with `403`, slow it down with `429`, answer `503`, or show a challenge page. None of those mean the page is gone.
+
+Onsite Link Verdict only reports a link as broken when the server says the page is gone (`404` or `410`, confirmed with a `GET` request) or when nothing answers at all, three checks in a row. Every other answer stays out of "Broken": refusals (`403`, `429`, `999`, challenge pages) go to "Unverifiable", and server errors wait under "Warnings" and are checked again. Each one comes with a note saying what happened.
+
+= Why do LinkedIn links show error 999? Why do Amazon links show 503 or 429? =
+
+`999` is the code LinkedIn uses to refuse automated requests. Amazon answers `503` or `429` to them. The pages are there; the server just does not talk to robots. Onsite Link Verdict never reports them as broken: `999` and `429` go straight to "Unverifiable"; a `503` is checked again first, and after three answers like it the link goes to "Unverifiable" too. Once there, it is not asked again the next day.
+
+= I just installed it. Where is it, and why is the list empty? =
+
+It lives under **Tools → Onsite Link Verdict**. Press the button to scan the whole site. Finding the links is quick; checking each one happens in the background, in small batches, so the lists fill up over the first minutes or hours depending on the size of your site. The panel shows how far it got ("750 of 1,000 links checked") and an estimate of the time left.
+
+If nothing moves at all, your site's cron is probably disabled, and the plugin shows a warning about it at the top of the page.
+
+= Does it check my whole site? =
+
+Yes: links and images in posts, pages, custom post types and comments, internal and external, including redirect chains. Once the first sweep is done it keeps checking, so a link that dies next month shows up next month.
+
+= Does it work with Elementor, Divi, Beaver Builder or WPBakery? =
+
+Yes. On a page built with a page builder the links are not in the stored post content; they are assembled when the page is rendered. Onsite Link Verdict renders the page first and reads what a visitor sees, so those links are found.
+
+= Does it find broken internal links after I move, unpublish or delete a page? =
+
+Yes. And when a link points at one of your own pages that still exists but is a draft, private or pending, it tells you exactly that, instead of saying the page is gone.
+
+= Does it work on localhost, a staging site or a password-protected site? =
+
+Yes. The checking runs inside your own WordPress, so a site that cannot be reached from the public internet is checked like any other.
+
+= Is it free? Is there a limit on the number of links? =
+
+Finding and checking is free, with no account and no credits, and the number of links does not change anything. The only limit: a single post or comment with more than 1,000 links is checked to its first 1,000. The paid add-on (below) is for fixing many links at once.
+
+= Can I check a link or a whole site without installing anything? =
+
+Yes, with two free tools on our site, no account needed: https://onsitetools.dev/check-a-link/ checks one link the way a robot and a browser see it, side by side, and https://onsitetools.dev/scan/ checks up to 40 public pages of any site.
+
 = Does this send my content anywhere? =
 
 No. Your posts, pages and comments stay where they are, and the results are stored in your own database. There is no cloud service behind the plugin holding your content. See "External services" below for everything that does go out, and why.
@@ -172,7 +221,7 @@ What that means for your own processing records is for you to decide — this is
 
 = Will it slow my site down? =
 
-It is built not to. Work happens in small scheduled batches with a hard cap, not all at once.
+It is built not to. No checking happens while a visitor is waiting for a page: it runs on your site's cron, in batches, and no new check starts after 45 seconds in a run, whatever the speed setting. The same address repeated across fifty posts is checked once per run, not fifty times. On shared hosting, pick the "Careful" speed.
 
 = Can it fix the broken links for me? =
 
@@ -198,6 +247,10 @@ If you want a rule to take effect on one specific post right away, open that pos
 
 (Exclusion rules are part of Pro.)
 
+= Can an AI assistant check my links? =
+
+Yes, on WordPress 6.9 or later. The plugin registers three abilities with the WordPress Abilities API: `onsite-link-verdict/get-summary` (how many links are broken, unverifiable, good or waiting), `onsite-link-verdict/get-links` (the links in one group, with the explanation of each result and the post it appears in) and `onsite-link-verdict/start-scan` (the same as the "Start scan" button). An assistant connected through the MCP Adapter plugin can then answer "are there broken links on this site?" without you opening the panel. They need an administrator account, they never edit your content, and starting a scan only queues it: the checking still runs in small background batches.
+
 = The plugin never seems to check anything =
 
 Your site's cron is probably disabled. Onsite Link Verdict shows a warning at the top of its page when it detects this. Ask your host how to set up a real cron job.
@@ -209,6 +262,22 @@ Your site's cron is probably disabled. Onsite Link Verdict shows a warning at th
 3. Choosing how fast to check. Three settings, each with its cost written next to it — and the wait worked out for the number of links actually waiting on your own site.
 
 == Changelog ==
+
+= 0.9.0 =
+* **AI assistants can now use the plugin.** On WordPress 6.9 and later it registers three abilities: a summary of the results, the list of links in one group (broken by default) with the plain-language explanation and the post each link is in, and a request for a full-site scan. They are visible to the WordPress REST API and to the MCP Adapter, need an administrator, and give the same numbers and the same explanations as the panel, because they read them from the same code.
+* Starting a scan from an assistant does exactly what the "Start scan" button does: it queues the site and returns. Nothing is checked inside the request.
+
+= 0.8.1 =
+* Security: updates the bundled Freemius SDK to 2.13.5, which fixes a vulnerability reported to Freemius. Please update.
+
+= 0.8.0 =
+* **The plugin can now ask you for a review, once, and only after it has actually done some work for you.** It waits until it has been installed for a week and has checked at least ten links, it appears as an ordinary dismissible notice, and if you say no it never comes back. There is a button for "I have a problem" next to it, which goes to support: if something is wrong we would rather hear it and fix it than read about it later.
+* The invitation carries no JavaScript. The usual way to build one has a race in it between opening the review page and recording your answer, and when the browser resolves it the wrong way you get asked again after you have already written the review.
+* The seven translations cover the new texts too.
+
+= 0.7.0 =
+* **The plugin now speaks seven languages.** Portuguese (Portugal and Brazil), Spanish, French, German, Italian and Dutch, alongside the original English. Every screen is translated, including the plain-language explanation of what happened to each link — which is the part that matters, because a status code is the same in every language and an explanation is not.
+* The translation template that shipped with the plugin was out of date: it listed 46 of the 129 texts, because it had been generated back at version 0.1.0 and never refreshed. It is now rebuilt from the current code, so anyone translating the plugin into another language starts from the whole of it.
 
 = 0.6.6 =
 * The plugin now links to its own home page, so you can reach the documentation and the paid add-on from the plugins screen instead of searching for them.

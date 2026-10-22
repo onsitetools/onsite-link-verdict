@@ -600,6 +600,33 @@ class Cron {
      * operação mais pesada do plugin e não tem pressa nenhuma — a fila vai sendo
      * verificada em paralelo pelo lote horário.
      */
+    /**
+     * Pede um varrimento do site inteiro: o que o botão "Start scan" faz.
+     *
+     * Vive aqui, e não no painel, porque tem dois clientes desde a 0.9.0: o botão
+     * e a ability `onsite-link-verdict/start-scan` que os assistentes de IA
+     * chamam. Os dois têm de fazer EXACTAMENTE o mesmo; com o código copiado,
+     * o primeiro acerto num deles deixava o outro a fazer outra coisa.
+     *
+     * Põe o site em fila daqui a 10 s (se já houver um pedido, não duplica) e
+     * agenda uma passagem do lote daqui a um minuto, para o primeiro resultado não
+     * ficar à espera do evento horário. Não verifica nada agora.
+     *
+     * @return bool Se já havia um varrimento em fila antes deste pedido.
+     */
+    public function request_full_scan() {
+        $ja_havia = (bool) wp_next_scheduled( self::HOOK_QUEUE_ALL );
+
+        if ( ! $ja_havia ) {
+            wp_schedule_single_event( time() + 10, self::HOOK_QUEUE_ALL );
+        }
+
+        // Sem guarda de propósito: ver Admin_Page::agendar_passagem_do_lote().
+        wp_schedule_single_event( time() + MINUTE_IN_SECONDS, self::HOOK );
+
+        return $ja_havia;
+    }
+
     public function schedule_queue_all_continuation() {
         if ( ! wp_next_scheduled( self::HOOK_QUEUE_ALL ) ) {
             wp_schedule_single_event( time() + MINUTE_IN_SECONDS, self::HOOK_QUEUE_ALL );
